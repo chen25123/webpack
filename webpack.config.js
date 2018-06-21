@@ -8,5 +8,16 @@ module.exports = {
     filename: 'bundle.js',
     // 输出路径，相对 本配置文件生成目录，最后的打包文件将会是  dist/bundle.js
     path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      }
+    ]
   }
 }
